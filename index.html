@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Product Detail Page">
+    <meta name="author" content="Bhaskararao Gummidi">
+    <title>Adidas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="./assets/js/script.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<div class="conainer-fluid">  <!-- control-fluid -->
+<div id="mySidenav" class="sidenav">  <!-- sidenav starting-->
+  <ul id="slidenav">
+      <li id="sidelist1">Sign In<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist1">My Basket(0)<span class="glyphicon glyphicon-shopping-cart pull-right"></span></li>
+      <li id="sidelist2">Gift Vouchers<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist2">About Us<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist2">Contact<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist2">Shipping & Delivery<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist2">Returns & Exchanges<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist2">FAQ's<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      <li id="sidelist2">Terms and Conditions<span class="glyphicon glyphicon-menu-right pull-right"></span></li>
+      </ul>
+</div>
+<div id="main">
+    <nav class="navbar navbar-inverse"> <!-- navbar -->
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#" ng-click="openNav()">&#9776;</a></li>
+        </ul>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">flatspot</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li ng-mouseover="showNone()"><a href="#">Latest</a></li>
+          <li ng-mouseover="showShoes()"><a href="#">Shoes</a></li>
+          <li ng-mouseover="showCloths()"><a href="#">Clothing</a></li>
+          <li ng-mouseover="showBrands()"><a href="#">Brands</a></li>
+          <li ng-mouseover="showSkate()"><a href="#">Skateboarding</a></li>
+          <li ng-mouseover="showJournal()"><a href="#">Journal</a></li>
+          <li ng-mouseover="showNone()"><a href="#" style="color: red !important;">Sale</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        </ul>
+    </nav> <!-- navbar -->
+    <div class="dropdown" ng-show="showShoe" ng-mouseleave="showShoe=false">  <!-- dropdown tabs content starting-->
+       <div class="container-fluid">
+           <h4 style="opacity: 0.5;">MOST POPULAR:</h4>
+           <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Adidas</p>
+                <p>Astforflex</p>
+                <p>Black Shoes</p>
+            </div>
+            <div class="col-md-4">
+                <p>Converse</p>
+                <p>Huf</p>
+                <p>New Balance</p>
+            </div>
+            <div class="col-md-4">
+                <p>Nike SB Stefan Janoski</p>
+                <p>Nike SB</p>
+                <p>Vans</p>
+            </div>
+        </div>
+        <hr>
+            <h4>VIEW ALL SHOES</h4>
+       </div>
+    </div>
+    <div class="dropdown" ng-show="showClothing" ng-mouseleave="showClothing=false">
+       <div class="container-fluid">
+           <h4 style="opacity: 0.5;">CATEGORIES:</h4>
+           <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Accessories</p>
+                <p>Bags</p>
+                <p>Beanies</p>
+                <p>Caps</p>
+                <p>Hats</p>
+            </div>
+            <div class="col-md-4">
+                <p>Jackets</p>
+                <p>Jeans</p>
+                <p>Shirts</p>
+                <p>Shorts</p>
+                <p>Sweatshirts</p>
+            </div>
+            <div class="col-md-4">
+                <p>Sweatpants</p>
+                <p>Socks</p>
+                <p>T-Shirts</p>
+                <p>Trousers</p>
+            </div>
+        </div>
+        <hr>
+            <h4>VIEW ALL CLOTHING</h4>
+       </div>
+    </div>
+    <div class="dropdown" ng-show="showBrand" ng-mouseleave="showBrand=false">
+       <div class="container-fluid">
+           <h4 style="opacity: 0.5;">MOST POPULAR:</h4>
+           <hr>
+        <div class="row">
+            <div class="col-md-4">          
+                <p>Adidas</p>
+                <p>Alltimers</p>
+                <p>Armor Lux</p>
+                <p>Belief</p>
+                <p>Ben Davis</p>
+                <p>Brixton</p>
+                <p>Bronze 56k</p>
+                <p>Butter Goods</p>
+                <p>Carhartt WIP</p>
+                <p>Champion</p>
+                <p>Converse</p>
+                <p>Dickies</p>
+                <p>Finisterre</p>
+            </div>
+            <div class="col-md-4">
+                <p>Flatspot</p>
+                <p>Gramicci</p>
+                <p>Hélas</p>
+                <p>Hockey Skateboards</p>
+                <p>HUF</p>
+                <p>Isle</p>
+                <p>Levi's</p>
+                <p>New Balance Numeric</p>
+                <p>Nike SB</p>
+                <p>Stefan Janoski</p>
+                <p>Palace</p>
+                <p>Pass Port</p>
+                <p>Patagonia</p>
+            </div>
+            <div class="col-md-4">
+                <p>Polar Skate Co.</p>
+                <p>Quasi Skateboards</p>
+                <p>Rip N Dip</p>
+                <p>Satta</p>
+                <p>Stan Ray</p>
+                <p>Stanton St. Sports</p>
+                <p>Skateboard Cafe</p>
+                <p>Stussy</p>
+                <p>The Quiet Life</p>
+                <p>Thrasher</p>
+                <p>Vans</p>
+                <p>Yardsale</p>
+                <p>Vetra</p>
+            </div>
+        </div>
+        <hr>
+            <h4>VIEW ALL BRANDS</h4>
+       </div>
+    </div>
+    <div class="dropdown" ng-show="showSkating" ng-mouseleave="showSkating=false">
+       <div class="container-fluid">
+           <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Decks</p>
+                <p>Hardware</p>
+            </div>
+            <div class="col-md-6">
+                <p>Trucks</p>
+                <p>Wheels</p>
+            </div>
+        </div>
+        <hr>
+            <h4>VIEW ALL SKATEBOARDING</h4>
+       </div>
+    </div>
+    <div class="dropdown" ng-show="showJournals" ng-mouseleave="showJournals=false">
+       <div class="container-fluid">
+           <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Features</p>
+            </div>
+            <div class="col-md-6">
+                <p>Blog</p>
+            </div>
+        </div>
+        <hr>
+       </div>
+    </div>   <!-- dropdown tabs content ending-->
+ <div class="row">  <!-- row starting for slider and description -->
+ <ul class="breadcrumb text-right">
+     <li>HOME</li>
+     <li>BRANDS</li>
+     <li>ADIDAS</li> 
+     <li>ADIDAS X HEALS 4 PANEL CAP - WHITE</li>
+ </ul>
+     <div class="col-md-5">  <!-- col-md-5 for description starting -->
+         <h1>Adidas x Helas 4 Panel Cap - White<br>$27.14</h1>
+         <h5 id="add">Add to basket<span class="glyphicon glyphicon-menu-right pull-right"></span></h5>
+         <hr>
+         <p ng-click="showDescriptive()">DESCRIPTION<span class="glyphicon glyphicon-plus pull-right" id="descript"></span></p>
+         <div ng-show="showDescript" id="descriptid">
+             <h2>Adidas x Helas 4 Panel Cap</h2>
+                <p>Adidas x Helas plain knit polyester 4 panel in white with 3-stripes in contrast green.</p>
+                <p>Strapback adjustment, embroidered Adidas x Helas branding.</p>
+                <p>Woven Adidas clamp label on the back.</p>
+                <p>One size.</p>
+                <p>View more Adidas at Flatspot</p>
+         </div>
+         <hr>
+         <p ng-click="showDetail()">PRODUCT DETAILS<span class=" glyphicon glyphicon-plus pull-right" id="detail"></span></p>
+         <div ng-show="showDetails" style="opacity: 0.5;">
+             <ul>
+                <li>100% Polyester</li>
+                <li>Plain Knit Material</li>
+                <li>Contrast 3-Stripes</li>
+                <li>Strapback Adjustable</li>
+                <li>Embroidered Co-Branding</li>
+                <li>Woven Clamp Labels</li>
+                <li>One Size</li>
+             </ul>
+         </div>
+         <hr>
+         <p ng-click="showShipping()">SHIPPING AND RETURNS<span class=" glyphicon glyphicon-plus pull-right" id="shipping"></span></p>
+         <div ng-show="showReturns" style="opacity: 0.5;">
+             <ul>
+                 <li>Order by 3pm for same day dispatch (weekdays only).</li>
+                 <li>Next day delivery is Mon-Fri only (exc. Bank Holidays).</li>
+                 <li>Saturday Delivery - order by 3pm Friday & choose the Saturday Delivery service.</li>
+             </ul>
+             <span><b><u>UK Shipping</u></b></span>
+             <ul>
+                 <li>DPD Local 'Predict' Next Day Delivery - £4.00 - FREE over £80</li>
+                 <li>DHL Next Working Day Delivery - £8.00</li>
+                 <li>Saturday Delivery DPD Local 'One hour predict' - £10.00</li>
+             </ul>
+             <span><b><u>International Shipping</u></b></span><br>
+             Please see our shipping page for full information on international shipping and the countries we ship to.
+             <hr>
+             <span><b><u>Returns</u></b></span><br>
+             If you are not 100% satisfied with your purchase you can return your goods for whatever reason, no questions asked, for a refund or exchange.
+             FREE UK returns service with Royal Mail.
+         </div>
+         <hr>
+         <h4 id="wishlist">Add to wishlist</h4>
+         <div id="labels">
+         <span class="label label-default facebook"><i class="glyphicon glyphicon-thumbs-up"></i> Like 1</span>
+         <span class="label label-default facebook">Share</span>
+         <span class="label label-default twitter"><i class="icon-twitter"></i>Tweet</span>
+         <span class="label label-default google">G+ Share</span>
+         </div>
+         <h4>RECENTLY VIEWED</h4>
+         <img src="./assets/images/cap5.jpg" border="1" style="cursor: pointer;"><br><br>
+     </div>  <!-- col-md-5 for description ending -->
+     <div class="col-md-7">  <!-- product image slider starting -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active dot" id="dot1"></li>
+            <li data-target="#myCarousel" data-slide-to="1" id="dot2" class="dot"></li>
+            <li data-target="#myCarousel" data-slide-to="2" id="dot3" class="dot"></li>
+            <li data-target="#myCarousel" data-slide-to="3" id="dot4" class="dot"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active" id="image1">
+              <img src="./assets/images/cap1.jpg" alt="cap1">
+            </div>
+            <div class="item" id="image2">
+              <img src="./assets/images/cap2.jpg" alt="cap2">
+            </div>
+            <div class="item" id="image3">
+              <img src="./assets/images/cap3.jpg" alt="cap3">
+            </div>
+             <div class="item" id="image4">
+              <img src="./assets/images/cap4.jpg" alt="cap4">
+            </div>
+          </div>
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><br>  <!-- carousel ending -->
+        <div id="smallimages">
+            <img src="./assets/images/cap1.jpg" width="140" height="160" ng-click="showCap1()">
+            <img src="./assets/images/cap2.jpg" width="140" height="160" ng-click="showCap2()">
+            <img src="./assets/images/cap3.jpg" width="140" height="160" ng-click="showCap3()">
+            <img src="./assets/images/cap4.jpg" width="140" height="160" ng-click="showCap4()">
+        </div>
+     </div>  <!-- col-md-7 for product image slider ending -->
+ </div>  <!-- row ending for slider and description -->
+ <hr>
+ <div id="links" class="text-center">
+ <span><img src="./assets/images/facebook.png" width="30" height="30"></span>
+ <span><img src="./assets/images/twitter.png" width="30" height="30"></span>
+ <span><img src="./assets/images/google.png" width="30" height="30"></span>
+ <span><img src="./assets/images/instagram.jpeg" width="30" height="30"></span>
+ <span><img src="./assets/images/pintrest.png" width="30" height="30"></span>
+ <span><img src="./assets/images/tumbler.png" width="30" height="30"></span>
+ </div>
+ </div> <!-- sidenav ending-->
+</div> <!-- control-fluid -->
+</body>
+</html>
